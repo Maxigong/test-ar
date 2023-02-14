@@ -1,9 +1,11 @@
 <template>
     <div>
         <div id="nav">
-            <router-link to="/">Home</router-link> |
+            <!-- <router-link to="/">Home</router-link> |
             <router-link :to="{ name: 'CardPage' }">card</router-link> |
-            <router-link :to="{ name: 'Puzzle' }">Puzzle</router-link>
+            <router-link :to="{ name: 'Puzzle' }">Puzzle</router-link> -->
+            <a href="/">Home</a> | <a href="#/card">card</a> |
+            <a href="#/puzzle">Puzzle</a>
         </div>
         <router-view />
     </div>

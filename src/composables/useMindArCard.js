@@ -23,7 +23,9 @@ export const useMindArtCard = () => {
                 .pause();
             mindarThree = new window.MINDAR.IMAGE.MindARThree({
                 container: document.querySelector(".main"),
-                // container: document.body,
+                uiError: "no",
+                uiLoading: "no",
+                uiScanning: "no",
                 imageTargetSrc:
                     "https://gateway.pinata.cloud/ipfs/Qmds4aT5YapfJxrgJVae7oEUhFfFN8uUwAmYC3FwkBuAer",
             });

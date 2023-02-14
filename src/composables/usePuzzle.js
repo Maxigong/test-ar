@@ -7,9 +7,13 @@ export const usePuzzle = () => {
     const startFunctions = async () => {
         try {
             mindarThree = new window.MINDAR.IMAGE.MindARThree({
-                container: document.body,
+                container: document.querySelector(".puzzle-container"),
+                overlay: false,
                 imageTargetSrc:
                     "https://gateway.pinata.cloud/ipfs/QmcudRyYCbvpZ6MrnKKYe27DnUiaybhLWzCrxFe6KBdKiC ",
+                uiError: "no",
+                uiLoading: "no",
+                uiScanning: "no",
             });
 
             const { renderer, camera, cssScene, cssRenderer } = mindarThree;
@@ -34,7 +38,10 @@ export const usePuzzle = () => {
                 if (itemsFound.length == 0) return;
                 setTimeout(() => {
                     itemsFound.forEach((el) => {
-                        gsap.to(`.${el}`, { opacity: 1 });
+                        gsap.to(`.${el}`, {
+                            opacity: 1,
+                            background: "transparent",
+                        });
                     });
                 }, 1000);
             };
