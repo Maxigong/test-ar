@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <button @click="startFunc">Start</button>
+        <button @click="startFunc">Start!</button>
         <div class="section">
             <div class="blue box"></div>
             <div class="red box"></div>
