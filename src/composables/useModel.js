@@ -36,7 +36,7 @@ export const useModel = () => {
             let mixer;
             loader.load("../../mafer_city/scene.gltf", (gltf) => {
                 mixer = new THREE.AnimationMixer(gltf.scene);
-                gltf.scene.scale.set(0.01, 0.01, 0.01);
+                gltf.scene.scale.set(0.003, 0.003, 0.003);
                 firstImage.group.add(gltf.scene);
 
                 const action = mixer.clipAction(gltf.animations[0]);
