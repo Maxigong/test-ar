@@ -48,7 +48,7 @@ export const useModel = () => {
                 console.log("firstImage");
             };
             firstImage.onTargetLost = () => {
-                console.log("lostt");
+                console.log("lost");
             };
 
             await mindarThree.start();
